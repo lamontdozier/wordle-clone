@@ -43,13 +43,13 @@ header {
     justify-content: center;
     align-items: center;
     margin: 0 auto; /* Centering the modal */
-    padding: 20px;
+    padding: 3em;
     border: 1px solid black;
     border-radius: 0.9rem;
     width: 30%;
     height: 50%;
     color: white;
-    font-family: Helvetica Neue;
+    font-family: Helvetica Neue, sans-serif;
     text-align: center;
     align-content: center;
     box-shadow: 0 0 15px rgb(13, 13, 13);
@@ -58,10 +58,11 @@ header {
 }
 #game-title {
     background-color: black;
+    margin: 0;
     display: flex;
     color: white;
     font-family: 'Futura', 'Arial Narrow', Arial, sans-serif;
-    font-size: 75px;
+    font-size: 3.5rem;
     letter-spacing: 2px;
     justify-content: center;
     align-items: center;
