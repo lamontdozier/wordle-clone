@@ -12,24 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('opening-modal');
     const closeModalButton = document.getElementById('close-modal');
     const container = document.getElementById('container');
-
-    // Show modal on page load
     setTimeout(() => {
         modal.classList.add('show');
-    }, 100); // Slight delay to ensure the CSS transition works
-
-    // Handle close modal button click
+    }, 100);
     closeModalButton.addEventListener('click', () => {
         const modalContent = document.getElementById('modal-content');
-
-        // Slide modal content out
         modalContent.style.transform = 'translateY(100vh)';
-
-        // Fade out modal and remove blur
         setTimeout(() => {
             modal.classList.add('hide');
             container.classList.add('show');
-        }, 1000); // Wait for the modal content to finish sliding out
+        }, 1000); 
     });
 });
 
@@ -128,7 +120,7 @@ const checkGuess = () => {
                 box.style.backgroundColor = '#111';
                 updateKeyboard(letter, '#111');
             }
-        }, index * 300); // Staggered feedback
+        }, index * 300);
     });
 
     setTimeout(() => {
