@@ -84,7 +84,7 @@ const addLetter = (keyPress) => {
     nextLetter += 1;
 };
 
-function deleteLetter() {
+const deleteLetter = () => {
     let row = document.getElementsByClassName("guess")[6 - remainingGuesses];
     let box = row.children[nextLetter - 1];
     box.textContent = "";
@@ -108,7 +108,7 @@ document.getElementById("keyboard").addEventListener("click", (event) => {
 });
 
 // Game functionality
-function checkGuess() {
+const checkGuess = () => {
     let row = document.getElementsByClassName("guess")[6 - remainingGuesses];
     let usedLetters = {};
 
@@ -143,14 +143,14 @@ function checkGuess() {
     }, 5 * 300);
 }
 
-function updateKeyboard(letter, color) {
+const updateKeyboard = (letter, color) => {
     const key = document.getElementById(letter.toUpperCase());
     if (key) {
         key.style.backgroundColor = color;
     }
 }
 
-function showModal(message) {
+const showModal = (message) => {
     const closingModal = document.getElementById('closing-modal');
     const modalMessage = document.getElementById('modal-message');
     modalMessage.textContent = message;
@@ -169,7 +169,7 @@ document.getElementById('closing-modal').addEventListener('click', () => {
     }, 1000);
 });
 
-// Reset the game
+// Reset
 document.getElementById('play-again').addEventListener('click', () => {
     window.location.reload();
 });
