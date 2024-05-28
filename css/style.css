@@ -79,9 +79,8 @@ header {
 
 
 
-
 /* Close Modal */
-.close-modal {
+button {
     background-color: #4CAF50;
     color: white;
     padding: 15px 32px;
@@ -94,6 +93,7 @@ header {
 #close-modal:hover {
     background-color: #45a049;
 }
+
 
 
 
