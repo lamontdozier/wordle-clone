@@ -1,5 +1,6 @@
 // Import Wordlist
 import { words } from './wordlist.js';
+import { notWords } from './wordlist.js';
 
 // Guesses variables
 const numberOfGuesses = 6;
@@ -119,6 +120,11 @@ const checkGuess = () => {
             } else {
                 box.style.backgroundColor = '#111';
                 updateKeyboard(letter, '#111');
+            }
+            for (let i = 0; i < notWords.length; i++) {
+                if (currentGuess !== notWords[i]) {
+                    console.log("Not in word list")
+                }
             }
         }, index * 300);
     });
