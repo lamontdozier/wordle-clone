@@ -125,8 +125,8 @@ function checkGuess() {
                 box.style.backgroundColor = 'GoldenRod';
                 updateKeyboard(letter, 'GoldenRod');
             } else {
-                box.style.backgroundColor = 'DimGray';
-                updateKeyboard(letter, 'DimGray');
+                box.style.backgroundColor = 'Black';
+                updateKeyboard(letter, 'Black');
             }
         }, index * 300); // Staggered feedback
     });
