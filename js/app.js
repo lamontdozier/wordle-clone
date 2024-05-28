@@ -125,8 +125,8 @@ const checkGuess = () => {
                 box.style.backgroundColor = 'GoldenRod';
                 updateKeyboard(letter, 'GoldenRod');
             } else {
-                box.style.backgroundColor = 'Black';
-                updateKeyboard(letter, 'Black');
+                box.style.backgroundColor = '#111';
+                updateKeyboard(letter, '#111');
             }
         }, index * 300); // Staggered feedback
     });

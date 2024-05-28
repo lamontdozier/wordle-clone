@@ -80,7 +80,7 @@ header {
 
 
 /* Close Modal */
-button {
+#close-modal {
     background-color: #4CAF50;
     color: white;
     padding: 15px 32px;

@@ -21,3 +21,9 @@ That's just what the player sees.  There's far more under the hood of this 'simp
 - Extra scripting to allow players to play again.
 
 This was not a walk in the park for me.  I love the look of well-crafted websites.  I had fun with the HTML and CSS aspects of this clone.  The JavaScript, however? Let's just say there was no holiday weekend for me.  Having said that, once bugs are removed, the game isn't impossibly intricate.
+
+## Difficulties
+There are some intricacies, however.  The word checker is the main function of the game and it has multiple hats to wear.  This was the most difficult part of the development process for me.  I really had a tough time getting the keyboard to accurately reflect the used letters properly.  The problem?  I had faulty logic and color names in my JavaScript lol.
+
+## Conclusion
+Overall, I enjoyed the process of developing this game and I am glad I was able to complete this project.  In future projects, I will probably focus on my planning and my JavaScript logic.  Because of my design background, I tend to fixate on the visuals of any project I work on but, if I'm being totally honest, function totally trumps form--especially on the web.  This will not be the last game I make.  I really want to focus on creating more complex games in the future.
