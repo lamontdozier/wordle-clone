@@ -8,6 +8,9 @@ During the pandemic, the collective attention of scores of people were captured 
 
 Why did choose to make my own version of Wordle? Well--I like the game.  I was one of those people that played the game daily.  Also, in a previous bootcamp, I attempted to make this game.  I failed lol.  So--this project became personal.  A grudge match if you will.  Could I finally attain enough skill to create my own version of Wordle?
 
+## Technology Used
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white) ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
+
 ## Game Mechanics
 The game mechanics are arguably simple.  Any reputable version of Wordle has the following:
 - A 5x6 grid to display the letters
