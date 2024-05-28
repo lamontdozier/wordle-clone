@@ -1,0 +1,284 @@
+:root {
+    background-color: #1E1E1E;
+    justify-content: center;
+}
+
+
+/* Header */
+header {
+    background-color: black;
+    display: flex;
+    color: white;
+    font-family: 'Futura', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* Modal backdrop */
+#opening-modal {
+    height: 100vh;
+    width: 100vw;
+    display: flex;  /* Ensure flex display for centering */
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .8); /* Barely visible backdrop */
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity .75s ease-in-out, visibility .75s ease-in-out, backdrop-filter .75s ease-in-out; /* Slower transition */
+}
+
+
+
+/* Modal content and animation */
+#modal-content {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centering the modal */
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 0.9rem;
+    width: 30%;
+    height: 50%;
+    color: white;
+    font-family: Helvetica Neue;
+    text-align: center;
+    align-content: center;
+    box-shadow: 0 0 15px rgb(13, 13, 13);
+    transform: translateY(100vh); /* Start off-screen */
+    transition: transform .9s ease-in-out; /* Slower and smoother transition */
+}
+#game-title {
+    background-color: black;
+    display: flex;
+    color: white;
+    font-family: 'Futura', 'Arial Narrow', Arial, sans-serif;
+    font-size: 75px;
+    letter-spacing: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+#opening-modal.hide {
+    opacity: 0;
+    visibility: 90%;
+    backdrop-filter: blur(0px); /* Remove blur */
+}
+#opening-modal.show #modal-content {
+    transform: translateY(0);
+}
+
+
+
+
+/* Close Modal */
+.close-modal {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#close-modal:hover {
+    background-color: #45a049;
+}
+
+
+
+/* Container */
+#container {
+    display: none;
+}
+#container.show {
+    display: block;
+}
+
+
+
+/* Game */
+#game-board {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+.guesses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: repeat(5, 4em);
+    grid-template-rows: repeat(6, 4em);
+    gap: .25rem;
+    margin-top: 1.5em;
+}
+
+.guess {
+    display: flex;
+}
+
+.tile {
+    margin: .2rem;
+    padding: 0em;
+    max-width: 80px;
+    font-family: Helvetica Neue, Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    border: .2rem solid hsl(240, 2%, 23%);
+    border-radius: .25rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    aspect-ratio: 1/1;
+    width: 25vw;   
+}
+
+
+
+/* Keyboard */
+.keyboard {
+    display: grid;
+    width: auto;
+    grid-template-columns: repeat(20, minmax(auto, 1.25em));
+    grid-auto-rows: 3em;
+    gap: .25em;
+    justify-content: center;
+    margin-top: 3em;
+}
+
+.key {
+    font-size: inherit;
+    grid-column: span 2;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(
+        var(--hue, 0), 
+        var(--saturation, 1%), 
+        calc(var(--lightness-offset, 0%) + var(--lightness, 36%))
+        );
+    color: white;
+    border-radius: .25em;
+    cursor: pointer;
+    user-select: none;
+}
+
+.key.large {
+    grid-column: span 3;
+}
+
+.key:hover, .key:active {
+    --lightness-offset: 10%;
+}
+
+/* New styles for used keys */
+.key.correct {
+    background-color: green;
+    color: white;
+}
+
+.key.present {
+    background-color: goldenrod;
+    color: white;
+}
+
+.key.absent {
+    background-color: rgb(25, 25, 25);
+    color: white;
+}
+
+/* Closing modal */
+#closing-modal {
+    height: 100vh;
+    width: 100vw;
+    display: flex;  /* Ensure flex display for centering */
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, .8); /* Barely visible backdrop */
+    backdrop-filter: blur(15px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .75s ease-in-out, visibility .75s ease-in-out, backdrop-filter .75s ease-in-out; /* Slower transition */
+}
+#closing-modal.show {
+    opacity: 1;
+    visibility: visible;
+    backdrop-filter: blur(15px); /* Remove blur */
+}
+#closing-modal-content {
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centering the modal */
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 0.9rem;
+    width: 30%;
+    height: 50%;
+    color: white;
+    text-align: center;
+    align-content: center;
+    box-shadow: 0 0 15px rgb(13, 13, 13);
+    transform: translateY(100vh); /* Start off-screen */
+    transition: transform .9s ease-in-out; /* Slower and smoother transition */
+}
+#closing-modal.show #closing-modal-content {
+    transform: translateY(0);
+}
+
+
+
+/* Play again button */
+#play-again {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#play-again:hover {
+    background-color: #45a049;
+}
+.hidden {
+    display: none;
+}
+
+.guess-letter-correct {
+    background-color: green;
+    border-color: green;
+}
+
+.guess-letter-elsewhere {
+    background-color: goldenrod;
+    border-color: goldenrod;
+}
+
+.guess-letter-absent {
+    background-color: rgb(25, 25, 25);
+    border-color: rgb(25, 25, 25);
+}
